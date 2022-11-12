@@ -1,2 +1,3 @@
 # Hubspot Course Project
-++Everything in client, bro
+
+Everything in client, bro
