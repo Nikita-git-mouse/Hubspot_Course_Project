@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/styles.css'
 const TableCell = ({item}) => {
-//const [state,setState] = useState(item)
+const [state,setState] = useState(item)
     console.log(item)
 
     return (
