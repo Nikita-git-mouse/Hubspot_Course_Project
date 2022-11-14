@@ -1,0 +1,26 @@
+.table__cell{
+    border: 1px black;
+    justify-content: flex-start;
+    display: inline-flex;
+    width: auto;
+}
+.table__row{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+
+}
+.table{
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+}
+.table__title{
+    display: flex;
+    margin: 0;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
