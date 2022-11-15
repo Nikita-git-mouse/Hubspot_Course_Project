@@ -22,8 +22,6 @@ const Account = () => {
     return (
         <section style={{ backgroundColor: '#eee' }}>
             <MDBContainer className="py-5">
-
-
                 <MDBRow>
                     <MDBCol lg="4">
                         <MDBCard className="mb-4">

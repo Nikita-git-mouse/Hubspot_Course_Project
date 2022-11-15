@@ -1,11 +1,12 @@
 import React from 'react';
+import TimeTable from "../components/TimeTable";
 
-const Timetable = () => {
+const Group = () => {
     return (
         <div>
-            Timetable
+            <TimeTable/>
         </div>
     );
 };
 
-export default Timetable;
+export default Group;
