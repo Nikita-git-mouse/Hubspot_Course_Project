@@ -1,5 +1,5 @@
 import React from 'react';
-import GroupTable from "../components/groupTable";
+import GroupTable from "../components/GroupTable";
 
 const Group = () => {
     return (
