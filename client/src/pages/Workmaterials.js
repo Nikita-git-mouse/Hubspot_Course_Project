@@ -1,9 +1,10 @@
 import React from 'react';
+import Pairs from "../components/Pairs";
 
 const Workmaterials = () => {
     return (
         <div>
-            Work Materials
+            <Pairs/>
         </div>
     );
 };
