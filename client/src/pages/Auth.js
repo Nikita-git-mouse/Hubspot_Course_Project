@@ -51,7 +51,7 @@ const Auth = observer(() => {
                     />
                     <Form.Control
                         className="mt-3"
-                        placeholder="Введите ваш пароль админчика..."
+                        placeholder="Введите ваш пароль администратора..."
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         type="password"
@@ -59,11 +59,11 @@ const Auth = observer(() => {
                     <Row className="d-flex justify-content-between mt-3 pl-3 pr-3">
                         {isLogin ?
                             <div>
-                                Нет человечка?) <NavLink to={REGISTRATION_ROUTE}>Зарегистрируйте!</NavLink>
+                                Нет человека?) <NavLink to={REGISTRATION_ROUTE}>Зарегистрируйте!</NavLink>
                             </div>
                             :
                             <div>
-                                Есть пацЫк? <NavLink to={LOGIN_ROUTE}>Выберите!</NavLink>
+                                Есть человечек? <NavLink to={LOGIN_ROUTE}>Выберите!</NavLink>
                             </div>
                         }
                         <Button className="mt-3 align-self-end"

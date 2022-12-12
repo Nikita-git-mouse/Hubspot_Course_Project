@@ -16,9 +16,11 @@ import {
     MDBListGroup,
     MDBListGroupItem
 } from 'mdb-react-ui-kit';
+import axios from 'axios'
 
 
 const Account = () => {
+    const ref = React.useRef(null)
     return (
         <section style={{ backgroundColor: '#eee' }}>
             <MDBContainer className="py-5">
@@ -157,17 +159,13 @@ const Account = () => {
                                         <MDBCardText className="mb-4"><span className="text-primary font-italic me-1 d-flex justify-content-center align-items-center">Коротко о себе:</span></MDBCardText>
 
                                         <div>
-                                        Ветер веет с юга
-                                        И луна взошла,
+                                        - Увлекаюсь катанием на своей нестабильной нервной системе
                                         </div><div>
-                                        Что же ты, блядюга,
-                                        Ночью не пришла?
+                                        - Изучаю Front-end в свободное от универа время
                                         </div><div>
-                                        Не пришла ты ночью,
-                                        Не явилась днем.
+                                        - Грамотно подхожу к выполению своих обязанностей
                                         </div><div>
-                                        Думаешь, мы дрочим?
-                                        Нет! Других ебём!
+                                        - Но это не всегла именно так
                                         </div>
                                     </MDBCardBody>
                                 </MDBCard>
@@ -175,6 +173,14 @@ const Account = () => {
                         </MDBRow>
                     </MDBCol>
                 </MDBRow>
+                <input ref={ref}/>
+                <button onClick={async () => {
+                     axios.post('http://192.168.177.208:3002/api/v1/teachers/event', {
+                         "classId": 40,
+                         "message": ref?.current.value || "Some text",
+                         "teacherId": 41
+                    })
+                }}>Click me</button>
             </MDBContainer>
         </section>
     );
