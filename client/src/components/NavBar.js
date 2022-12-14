@@ -22,7 +22,6 @@ const NavBar = () => {
                 </Nav>
                 <Nav className="m-lg-0auto">
                     <Button size={ "sm" } variant={'outline-light'}><Nav.Link style={{color:'white'}} href={'/login'}>SELECT USER</Nav.Link></Button>
-
                 </Nav>
             </Container>
         </Navbar>

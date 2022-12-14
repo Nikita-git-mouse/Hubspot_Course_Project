@@ -9,6 +9,8 @@ import {
     MDBCol,
     MDBCardGroup
 } from 'mdb-react-ui-kit';
+
+import {Button} from "react-bootstrap";
 import ModalForm from "./ModalForm";
 import {values} from "mobx";
 import {defaults} from "axios";
@@ -34,30 +36,27 @@ const Pairs = () => {
     ]
     return (
         <div className='w-75 ms-auto me-auto mt-2' >
-
-                <MDBRow className='row-cols-1 row-cols-md-5 g-4 ' >
-                    {Pairs.map((item) =>
-                        <MDBCol>
-
+            <MDBRow className='row-cols-1 row-cols-md-5 g-4 ' >
+                {Pairs.map((item) =>
+                    <MDBCol>
                         <MDBCard className='m-1' shadow='0' border='dark' background='dark'  >
-                        <MDBCardBody className='text-dark'>
-                            <MDBCardTitle className='text-white'>{item.id}. {item.title}</MDBCardTitle>
-                            <MDBCardText className='text-white'>
-                                <p>Group: {item.group}</p>
-                                <p>Teacher: {item.teacher}</p>
-                                <p>Type: {item.type}</p>
-                                <p>Time: {item.time}</p>
-                            </MDBCardText>
-                            <MDBBtn onClick={()=>{btnInfo=item;toggleShow()}}  color='white' className='text-white border-white '>
-                                Select</MDBBtn>
-                            <ModalForm active={modal} setActive={setModal} info={btnInfo}/>
-                        </MDBCardBody>
+                            <MDBCardBody className='text-dark'>
+                                <MDBCardTitle className='text-white'>{item.id}. {item.title}</MDBCardTitle>
+                                <MDBCardText className='text-white'>
+                                    <p>Group: {item.group}</p>
+                                    <p>Teacher: {item.teacher}</p>
+                                    <p>Type: {item.type}</p>
+                                    <p>Time: {item.time}</p>
+                                </MDBCardText>
+                                <Button size={ "sm" } variant={'outline-light'} onClick={()=>{btnInfo=item;toggleShow()}}>
+                                    Select
+                                </Button>
+                            </MDBCardBody>
                         </MDBCard>
-                        </MDBCol>
-                    )}
-
-                </MDBRow>
-
+                    </MDBCol>
+                )}
+                <ModalForm active={modal} setActive={setModal} info={btnInfo}/>
+            </MDBRow>
         </div>
     );
 };

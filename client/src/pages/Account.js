@@ -17,6 +17,7 @@ import {
     MDBListGroupItem
 } from 'mdb-react-ui-kit';
 import axios from 'axios'
+import {Button} from "react-bootstrap";
 
 
 const Account = () => {
@@ -37,8 +38,14 @@ const Account = () => {
                                 <p className="text-muted mb-1">Искуственный интеллект</p>
                                 <p className="text-muted mb-4">3-й курс ФИТиУ</p>
                                 <div className="d-flex justify-content-center mb-2">
-                                    <MDBBtn>Delete</MDBBtn>
-                                    <MDBBtn outline className="ms-1">Edit</MDBBtn>
+                                    {/*<MDBBtn>Delete</MDBBtn>
+                                        <MDBBtn outline className="ms-1">Edit</MDBBtn>*/}
+                                    <Button variant="primary" className="me-1">
+                                        Delete
+                                    </Button>
+                                    <Button variant="outline-primary">
+                                        Edit
+                                    </Button>
                                 </div>
                             </MDBCardBody>
                         </MDBCard>
@@ -152,12 +159,10 @@ const Account = () => {
                                     </MDBCardBody>
                                 </MDBCard>
                             </MDBCol>
-
                             <MDBCol md="6">
                                 <MDBCard className="mb-4 mb-md-0">
                                     <MDBCardBody>
                                         <MDBCardText className="mb-4"><span className="text-primary font-italic me-1 d-flex justify-content-center align-items-center">Коротко о себе:</span></MDBCardText>
-
                                         <div>
                                         - Увлекаюсь катанием на своей нестабильной нервной системе
                                         </div><div>
@@ -173,14 +178,14 @@ const Account = () => {
                         </MDBRow>
                     </MDBCol>
                 </MDBRow>
-                <input ref={ref}/>
+                {/*<input ref={ref}/>
                 <button onClick={async () => {
-                     axios.post('http://192.168.177.208:3002/api/v1/teachers/event', {
-                         "classId": 40,
-                         "message": ref?.current.value || "Some text",
-                         "teacherId": 41
+                    axios.post('http://192.168.177.208:3002/api/v1/teachers/event', {
+                        "classId": 40,
+                        "message": ref?.current.value || "Some text",
+                        "teacherId": 41
                     })
-                }}>Click me</button>
+                }}>Click me</button>*/}
             </MDBContainer>
         </section>
     );
