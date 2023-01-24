@@ -36,10 +36,10 @@ const Pairs = () => {
     ]
     return (
         <div className='w-75 ms-auto me-auto mt-2' >
-            <MDBRow className='row-cols-1 row-cols-md-5 g-4 ' >
+            <MDBRow className='row-cols-1 row-cols-md-5 g-4' >
                 {Pairs.map((item) =>
                     <MDBCol>
-                        <MDBCard className='m-1' shadow='0' border='dark' background='dark'  >
+                        <MDBCard className='m-1' shadow='0' border='dark' background='dark'>
                             <MDBCardBody className='text-dark'>
                                 <MDBCardTitle className='text-white'>{item.id}. {item.title}</MDBCardTitle>
                                 <MDBCardText className='text-white'>

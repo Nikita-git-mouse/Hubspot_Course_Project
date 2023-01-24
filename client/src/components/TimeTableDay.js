@@ -20,7 +20,6 @@ const TimeTableDay = (props) => {
                 {
                     props.pairs.map(Pair =>
                         <tr>
-
                             <td>
                                 <p className='ms-2 fw-bold mb-1'>
                                     {
@@ -35,7 +34,8 @@ const TimeTableDay = (props) => {
                                 <p className='px-1 ms-2 fw-bold mb-1'>{Pair[0]}</p>
                                 <p className='px-1 ms-2 mb-3 text-muted mb-0'>{Pair[4]}</p>
                             </td>
-                        </tr>)
+                        </tr>
+                    )
                 }
             </MDBCardBody>
 
